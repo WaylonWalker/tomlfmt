@@ -1,0 +1,59 @@
+[project]
+classifiers = [
+ "Development Status :: 3 - Alpha",
+ "Environment :: Console",
+ "Intended Audience :: Developers",
+ "Natural Language :: English",
+ "Operating System :: OS Independent",
+ "Programming Language :: Python :: 3 :: Only",
+ "Programming Language :: Python :: 3",
+ "Programming Language :: Python :: 3.10",
+ "Programming Language :: Python :: 3.6",
+ "Programming Language :: Python :: 3.7",
+ "Programming Language :: Python :: 3.8",
+ "Programming Language :: Python :: 3.9",
+ "Programming Language :: Python :: Implementation :: CPython",
+ "Programming Language :: Python :: Implementation :: PyPy",
+ "Programming Language :: Python",
+ "Topic :: Software Development",
+ "Topic :: Text Processing",
+ "Typing :: Typed",
+]
+dependencies = [
+ "toml",
+]
+dynamic = [
+ "version",
+]
+description = "A simple toml formatter"
+name = "tomlfmt"
+readme = "README.md"
+requires-python = ">=3.6"
+[[project.authors]]
+name = "Waylon Walker"
+email = "waylon@waylonwalker.com"
+
+[build-system]
+requires = [
+ "hatchling>=1.4.1",
+]
+build-backend = "hatchling.build"
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Source = "https://github.com/waylonwalker/tomlfmt"
+
+[project.scripts]
+tomlfmt = "tomlfmt.cli:cli"
+
+[tool.hatch.version]
+path = "tomlfmt/__about__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+ "/.github",
+]
+
+[tool.hatch.build.targets.wheel]
